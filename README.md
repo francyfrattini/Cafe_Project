@@ -10,7 +10,7 @@ Il proprietario del ristorante avrà un profilo admin con la possibilità di agg
 -------------------------------------------------------------------------------------------------------------------------------------
 
 Project under construction created with the framework ```ANGULAR```. <br>
-Website for a bar consisting of:
+Website for a cafe consisting of:
 - HOME
 - MENU
 - CONTACTS
