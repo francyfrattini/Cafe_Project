@@ -1,6 +1,6 @@
 # Cafe_Project
 
-Progetto in fase di costruzione.
+Progetto in fase di costruzione realizzato con il framework ```ANGULAR```.
 Website per un bar composto da:
 - HOME
 - MENU
@@ -9,7 +9,7 @@ Il proprietario del ristorante avrà un profilo admin con la possibilità di agg
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-Project under construction.
+Project under construction created with the framework ```ANGULAR```.
 Website for a bar consisting of:
 - HOME
 - MENU
