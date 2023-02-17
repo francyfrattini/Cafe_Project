@@ -1,0 +1,48 @@
+.footer {
+    background-color: var(--verde-nav);
+    overflow: hidden;
+    position: sticky;
+    color: white;
+    top: 100%;
+    padding: 30px;
+}
+
+#testo-footer {
+    text-align: center;
+}
+
+#descrizione-footer,
+#social {
+    margin-top: 30px;
+}
+
+#social-link {
+    font-size: 30px;
+    color: white;
+    margin: 20px;
+}
+
+#social-link:hover {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 20px;
+}
+
+#posizione {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+}
+
+#posizione:hover {
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+#logocompleto900 {
+    width: 150px;
+}

@@ -1,0 +1,54 @@
+
+#table-container{
+    margin: auto;
+}
+
+#table-container-vini.container{
+     margin-left: -12px;
+}
+
+#title{
+ text-transform: uppercase;
+}
+
+td{
+    border: none;
+}
+
+#titolo{
+    font-weight: bold;
+}
+
+#titolo,#descrizione1, #descrizione, #prezzo, #descrizione2, #titolo-vino, #titolo-colonna{
+    font-family: 'Nunito', sans-serif;
+}
+
+#descrizione1{
+    font-size: 14px;
+    margin-top: -15px;
+    font-style: oblique;
+}
+
+#descrizione{
+    color:var(--grigio-descr);
+    font-size: 14px;
+    margin-top: -15px;
+}
+
+#descrizione2{
+    color:var(--grigio-descr);
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+#titolo-vino{
+    font-weight: bold;
+}
+
+#titolo-colonna{
+    font-weight: bold;
+}
+
+#prezzo, #titolo-colonna{
+    text-align: end;
+}

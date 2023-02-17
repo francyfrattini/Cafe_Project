@@ -1,0 +1,483 @@
+<!-- CAFFETTERIA -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Caffetteria</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let caffe of allCaffe">
+        <td colspan="2">
+          <p id="titolo">{{caffe.titolo}}</p>
+          <p id="descrizione">{{caffe.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{caffe.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- <div class="container mt-5" id="table-container">
+  <p id="title">Caffetteria</p>
+
+  <table id="quotes-table" class="table">
+    <tbody>
+      <tr *ngFor="let caffe of allCaffe">
+        <td >
+          <p id="titolo">{{caffe.titolo}}</p>
+          <p id="descrizione">{{caffe.descrizione}}</p>
+        </td>
+        <td><p></p></td>
+        <td>
+          <p id="prezzo">{{caffe.prezzo}}€</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<!-- CAFFE DEL POMERIGGIO -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Caffè del pomeriggio</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let caffe of allCaffePome">
+        <td colspan="2">
+            <p id="titolo">{{caffe.titolo}}</p>
+            <p id="descrizione">{{caffe.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{caffe.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- PATICCERIA -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Pasticceria</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let pasticcino of allPasticcini">
+        <td colspan="2">
+          <p id="titolo">{{pasticcino.titolo}}</p>
+          <p id="descrizione">{{pasticcino.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{pasticcino.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- SALATI -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Salati</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let salatino of allSalatini">
+        <td colspan="2">
+          <p id="titolo">{{salatino.titolo}}</p>
+          <p id="descrizione">{{salatino.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{salatino.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- BIBITE -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Bibite</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let bibita of allBibite">
+        <td colspan="2">
+          <p id="titolo">{{bibita.titolo}}</p>
+          <p id="descrizione">{{bibita.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{bibita.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- BIRRE -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Birre</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let birra of allBirre">
+        <td colspan="2">
+          <p id="titolo">{{birra.titolo}}</p>
+          <p id="descrizione">{{birra.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{birra.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<p>Le birre artigianali italiane di Collesi trovano il loro microclima ideale in un piccolo borgo medievale, Apecchio,
+  al confine tra Marche e Umbria. Nascono qui tutte le eccellenze a marchio Collesi e da qui viaggiano in tutto il mondo
+  incontrando il gusto di un pubblico di estimatori internazionali e ottenendo prestigiosi premi.</p>
+
+<!-- BIRRE COLLESI-->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Birre Collesi</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let birracollese of allBirreCollesi">
+        <td colspan="2">
+          <p id="titolo">{{birracollese.titolo}}</p>
+          <p id="descrizione">{{birracollese.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{birracollese.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- APERITIVI CLASSICI -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Aperitivi classici</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let ape of allApe">
+        <td colspan="2">
+          <p id="titolo">{{ape.titolo}}</p>
+          <p id="descrizione">{{ape.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{ape.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- SPRITZ -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Spritz</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let spritz of allSpritz">
+        <td colspan="2">
+          <p id="titolo">{{spritz.titolo}}</p>
+          <p id="descrizione">{{spritz.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{spritz.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- SIGNATURE COCKTAIL -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Signature Cocktail</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let signature of allSignature">
+        <td colspan="2">
+          <p id="titolo">{{signature.titolo}}</p>
+          <p id="descrizione1">{{signature.descrizione1}}</p>
+          <p id="descrizione">{{signature.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{signature.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- COCKTAILS -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Cocktails</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let cocktail of allCocktails">
+        <td colspan="2">
+          <p id="titolo">{{cocktail.titolo}}</p>
+          <p id="descrizione">{{cocktail.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{cocktail.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- ANALCOLICI -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Analcolici</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let analcolico of allAnalcolici">
+        <td colspan="2">
+          <p id="titolo">{{analcolico.titolo}}</p>
+          <p id="descrizione">{{analcolico.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{analcolico.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- PIATTO APERITIVO -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Piatto aperitivo</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let piattoApe of allPiattiApe">
+        <td colspan="2">
+          <p id="titolo">{{piattoApe.titolo}}</p>
+          <p id="descrizione">{{piattoApe.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{piattoApe.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- GIN -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">Gin</p>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let gin of allGin">
+        <td colspan="2">
+          <p id="titolo">{{gin.titolo}}</p>
+          <p id="descrizione">{{gin.descrizione}}</p>
+          <p id="descrizione2">{{gin.descrizione2}}</p>
+        </td>
+        <td id="prezzo">{{gin.prezzo}}€
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+  <!-- VINI BIANCHI -->
+
+  <div class="container mt-5" id="table-container">
+    <p id="title">Vini Bianchi</p>
+  
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <td colspan="2"></td>
+          <td id="titolo-colonna">Calice</td>
+          <td id="titolo-colonna">Bottiglia</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vinobianco of allViniBianchi">
+          <td colspan="2">
+            <p id="titolo-vino">{{vinobianco.titolo}}</p>
+            <p id="descrizione">{{vinobianco.descrizione}}</p>
+          </td>
+          <td id="prezzo">{{vinobianco.prezzo}}€
+          </td>
+          <td id="prezzo">{{vinobianco.prezzo1}}€
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>
+
+  <!-- VINI ROSSI -->
+
+  <div class="container mt-5" id="table-container">
+    <p id="title">Vini Rossi</p>
+  
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <td colspan="2"></td>
+          <td id="titolo-colonna">Calice</td>
+          <td id="titolo-colonna">Bottiglia</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vinorosso of allViniRossi">
+          <td colspan="2">
+            <p id="titolo-vino">{{vinorosso.titolo}}</p>
+            <p id="descrizione">{{vinorosso.descrizione}}</p>
+          </td>
+          <td id="prezzo">{{vinorosso.prezzo}}€
+          </td>
+          <td id="prezzo">{{vinorosso.prezzo1}}€
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>
+
+  <!-- ROSE -->
+
+  <div class="container mt-5" id="table-container">
+    <p id="title">Rosè</p>
+  
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <td colspan="2"></td>
+          <td id="titolo-colonna">Calice</td>
+          <td id="titolo-colonna">Bottiglia</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rose of allRose">
+          <td colspan="2">
+            <p id="titolo-vino">{{rose.titolo}}</p>
+            <p id="descrizione">{{rose.descrizione}}</p>
+          </td>
+          <td id="prezzo">{{rose.prezzo}}€
+          </td>
+          <td id="prezzo">{{rose.prezzo1}}€
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>
+
+  <!-- BOLLICINE -->
+
+  <div class="container mt-5" id="table-container">
+    <p id="title">Bollicine</p>
+  
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <td colspan="2"></td>
+          <td id="titolo-colonna">Calice</td>
+          <td id="titolo-colonna">Bottiglia</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bollicine of allBollicine">
+          <td colspan="2">
+            <p id="titolo-vino">{{bollicine.titolo}}</p>
+            <p id="descrizione">{{bollicine.descrizione}}</p>
+          </td>
+          <td id="prezzo">{{bollicine.prezzo}}€
+          </td>
+          <td id="prezzo">{{bollicine.prezzo1}}€
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>
+
+  <!-- GRAPPE -->
+
+  <div class="container mt-5" id="table-container">
+    <p id="title">Grappe</p>
+  
+    <table class="table mt-5">
+      <tbody>
+        <tr *ngFor="let grappe of allGrappe">
+          <td colspan="2">
+            <p id="titolo">{{grappe.titolo}}</p>
+            <p id="descrizione">{{grappe.descrizione}}</p>
+            <p id="descrizione2">{{grappe.descrizione2}}</p>
+          </td>
+          <td id="prezzo">{{grappe.prezzo}}€
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>
+
+  <!-- WHISKY -->
+
+  <div class="container mt-5" id="table-container">
+    <p id="title">Whisky</p>
+  
+    <table class="table mt-5">
+      <tbody>
+        <tr *ngFor="let whisky of allWhisky">
+          <td colspan="2">
+            <p id="titolo">{{whisky.titolo}}</p>
+            <p id="descrizione">{{whisky.descrizione}}</p>
+            <p id="descrizione2">{{whisky.descrizione2}}</p>
+          </td>
+          <td id="prezzo">{{whisky.prezzo}}€
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>
+
+  <!-- RUM -->
+
+  <div class="container mt-5" id="table-container">
+    <p id="title">rum</p>
+  
+    <table class="table mt-5">
+      <tbody>
+        <tr *ngFor="let rum of allRum">
+          <td colspan="2">
+            <p id="titolo">{{rum.titolo}}</p>
+            <p id="descrizione">{{rum.descrizione}}</p>
+            <p id="descrizione2">{{rum.descrizione2}}</p>
+          </td>
+          <td id="prezzo">{{rum.prezzo}}€
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>

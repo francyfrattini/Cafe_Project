@@ -1,0 +1,7 @@
+
+.carousel{
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--verde-body);
+}

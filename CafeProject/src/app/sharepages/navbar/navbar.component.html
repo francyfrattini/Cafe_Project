@@ -1,0 +1,45 @@
+<nav class="navbar fixed-top">
+    <div class="container-fluid">
+        <img src="../../../assets/immagini/900_coming soon 2.png" id="scritta900" alt="logo_900"><a class="navbar-brand" href=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <img src="../../../assets/immagini/900_numero (1).png" id="logo900" alt="logo_900"><h2 class="offcanvas-title" id="offcanvasNavbarLabel"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contatti">Contatti</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!----------------------------------- NAVBAR -------------------------------------->
+
+
+<ul id="navbar" ngbNav #nav="ngbNav" [activeId]="1" class="nav-tabs justify-content-center">
+	<li [ngbNavItem]="1">
+		<a ngbNavLink routerLink=""><img src="../../../assets/immagini/2014-11-24 08.32.50.png" height="20px" alt=""><b> W.I.P. </b>HOME</a>
+	</li>
+    <li [ngbNavItem]="3">
+		<a ngbNavLink routerLink="menu">MENU</a>
+	</li>
+    <li [ngbNavItem]="4">
+		<a ngbNavLink routerLink="contatti">CONTATTI</a>
+	</li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
