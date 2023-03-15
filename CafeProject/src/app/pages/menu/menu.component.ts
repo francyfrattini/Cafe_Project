@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Caffetteria } from 'src/app/interfaces/caffetteria';
-import { Salati } from 'src/app/interfaces/salati';
+import { Caffetteria } from 'src/app/classes/caffetteria';
+import { Salati } from 'src/app/classes/salati';
 import { AnalcoliciService } from 'src/app/services/analcolici.service';
 import { ApeClassiciService } from 'src/app/services/ape-classici.service';
 import { BibiteService } from 'src/app/services/bibite.service';

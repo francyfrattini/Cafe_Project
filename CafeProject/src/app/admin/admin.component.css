@@ -1,0 +1,51 @@
+
+#title, #title-menu, #title-gin{
+    font-family: 'Nova Mono', monospace;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 2px black solid;
+}
+
+td {
+    border: none;
+}
+
+#titolo {
+    font-weight: bold;
+}
+
+#descrizione1 {
+    font-size: 14px;
+    margin-top: -15px;
+    font-style: oblique;
+}
+
+#descrizione {
+    color: var(--grigio-descr);
+    font-size: 14px;
+    margin-top: -15px;
+}
+
+#descrizione2 {
+    color: var(--grigio-descr);
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+#titolo-vino {
+    font-weight: bold;
+}
+
+#titolo-colonna {
+    font-weight: bold;
+}
+
+#prezzo,
+#titolo-colonna {
+    text-align: end;
+}
+
+#btn-add{
+    margin-left: 10px;
+}

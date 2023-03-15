@@ -3,6 +3,10 @@ nav.navbar, .offcanvas{
     background-color:var(--verde-nav);
 }
 
+.offcanvas-header{
+    border-bottom: 1px  rgba(255, 255, 255, 0.7) solid;
+}
+
 a.navbar-brand{
     /* font-family: 'Nova Mono', monospace; */
     font-family: 'Tulpen One', cursive;
@@ -31,4 +35,9 @@ a.nav-link.active:hover{
 
 #scritta900{
     width: 100px;
+}
+
+#admin{
+    margin-top: 500px;
+    font-size: 8px;
 }

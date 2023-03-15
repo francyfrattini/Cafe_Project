@@ -1,0 +1,2270 @@
+<!-- CAFFETTERIA -->
+
+<p id="title">CAFFETTERIA</p>
+
+
+<div id="table">
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let caffe of allCaffe">
+        <td colspan="2">
+          <p id="titolo">{{caffe.titolo}}</p>
+          <p id="descrizione">{{caffe.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{caffe.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModifica"
+            class="btn btn-primary" (click)="onEdit(caffe)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteCaffetteria(caffe)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungi">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungi" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addCaffetteria()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModifica" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateCaffetteria()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div class="container mt-5" id="table-container">
+    <p id="title">Caffetteria</p>
+  
+    <table id="quotes-table" class="table">
+      <tbody>
+        <tr *ngFor="let caffe of allCaffe">
+          <td >
+            <p id="titolo">{{caffe.titolo}}</p>
+            <p id="descrizione">{{caffe.descrizione}}</p>
+          </td>
+          <td><p></p></td>
+          <td>
+            <p id="prezzo">{{caffe.prezzo}}€</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+<!-- CAFFE DEL POMERIGGIO -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">CAFFE' DEL POMERIGGIO</p>
+</div>
+
+<div id="table2">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let caffepome of allCaffePome">
+        <td colspan="2">
+          <p id="titolo">{{caffepome.titolo}}</p>
+          <p id="descrizione">{{caffepome.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{caffepome.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaCaffepome"
+            class="btn btn-primary" (click)="onEditCaffePome(caffepome)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteCaffePome(caffepome)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiCaffepome">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiCaffepome" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addCaffePome()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaCaffepome" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateCaffePome()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PATICCERIA -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">PASTICCERIA</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let pasticcino of allPasticcini">
+        <td colspan="2">
+          <p id="titolo">{{pasticcino.titolo}}</p>
+          <p id="descrizione">{{pasticcino.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{pasticcino.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaPasticceria"
+            class="btn btn-primary" (click)="onEditPasticceria(pasticcino)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deletePasticceria(pasticcino)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiPasticceria">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiPasticceria" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addPasticceria()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaPasticceria" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updatePasticceria()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SALATI -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">SALATI</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let salatino of allSalatini">
+        <td colspan="2">
+          <p id="titolo">{{salatino.titolo}}</p>
+          <p id="descrizione">{{salatino.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{salatino.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaSalati"
+            class="btn btn-primary" (click)="onEditSalati(salatino)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteSalati(salatino)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiSalati">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiSalati" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="addSalati()">Aggiungi
+            elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaSalati" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateSalati()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BIBITE -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">BIBITE</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let bibita of allBibite">
+        <td colspan="2">
+          <p id="titolo">{{bibita.titolo}}</p>
+          <p id="descrizione">{{bibita.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{bibita.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaBibite"
+            class="btn btn-primary" (click)="onEditBibite(bibita)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteBibite(bibita)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiBibite">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiBibite" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="addBibite()">Aggiungi
+            elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaBibite" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateBibite()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BIRRE -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">BIRRE</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let birra of allBirre">
+        <td colspan="2">
+          <p id="titolo">{{birra.titolo}}</p>
+          <p id="descrizione">{{birra.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{birra.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaBirre"
+            class="btn btn-primary" (click)="onEditBirre(birra)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteBirre(birra)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiBirre">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiBirre" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="addBirre()">Aggiungi
+            elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaBirre" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateBirre()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Le birre artigianali italiane di Collesi trovano il loro microclima ideale in un piccolo borgo medievale, Apecchio,
+  al confine tra Marche e Umbria. Nascono qui tutte le eccellenze a marchio Collesi e da qui viaggiano in tutto il mondo
+  incontrando il gusto di un pubblico di estimatori internazionali e ottenendo prestigiosi premi.</p>
+
+<!-- BIRRE COLLESI-->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">BIRRE COLLESI</p>
+</div>
+
+<div id="table2">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let birracollese of allBirreCollesi">
+        <td colspan="2">
+          <p id="titolo">{{birracollese.titolo}}</p>
+          <p id="descrizione">{{birracollese.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{birracollese.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaBirreCollesi"
+            class="btn btn-primary" (click)="onEditBirreCollesi(birracollese)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteBirreCollesi(birracollese)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiBirreCollesi">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiBirreCollesi" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addBirreCollesi()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaBirreCollesi" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateBirreCollesi()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- APERITIVO -->
+
+<!-- <div class="container mt-3" id="table-container1">
+  <p id="title-menu">APERITIVO</p>
+</div> -->
+
+<!-- APERITIVI CLASSICI -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">APERITIVI CLASSICI</p>
+</div>
+
+<div id="table2">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let ape of allApe">
+        <td colspan="2">
+          <p id="titolo">{{ape.titolo}}</p>
+          <p id="descrizione">{{ape.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{ape.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaApeClassici"
+            class="btn btn-primary" (click)="onEditApeClassici(ape)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteApeClassici(ape)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiApeClassici">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiApeClassici" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addApeClassici()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaApeClassici" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateApeClassici()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPRITZ -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">SPRITZ</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let spritz of allSpritz">
+        <td colspan="2">
+          <p id="titolo">{{spritz.titolo}}</p>
+          <p id="descrizione">{{spritz.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{spritz.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaSpritz"
+            class="btn btn-primary" (click)="onEditSpritz(spritz)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteSpritz(spritz)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiSpritz">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiSpritz" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="addSpritz()">Aggiungi
+            elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaSpritz" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateSpritz()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIGNATURE COCKTAIL -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">SIGNATURE COCKTAIL</p>
+</div>
+
+<div id="table2">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let signature of allSignature">
+        <td colspan="2">
+          <p id="titolo">{{signature.titolo}}</p>
+          <p id="descrizione1">{{signature.descrizione1}}</p>
+          <p id="descrizione">{{signature.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{signature.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaSignature"
+            class="btn btn-primary" (click)="onEditSignatureCocktail(signature)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteSignatureCocktail(signature)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiSignature">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiSignature" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione1</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione1"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione2</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addSignatureCocktail()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaSignature" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione1</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione1"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione2</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateSignatureCocktail()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COCKTAILS -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">COCKTAILS</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let cocktail of allCocktails">
+        <td colspan="2">
+          <p id="titolo">{{cocktail.titolo}}</p>
+          <p id="descrizione">{{cocktail.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{cocktail.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaCocktails"
+            class="btn btn-primary" (click)="onEditCocktails(cocktail)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteCocktails(cocktail)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiCocktails">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiCocktails" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addCocktails()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaCocktails" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateCocktails()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ANALCOLICI -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">ANALCOLICI</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let analcolico of allAnalcolici">
+        <td colspan="2">
+          <p id="titolo">{{analcolico.titolo}}</p>
+          <p id="descrizione">{{analcolico.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{analcolico.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaAnalcolici"
+            class="btn btn-primary" (click)="onEditAnalcolici(analcolico)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteAnalcolici(analcolico)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiAnalcolici">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiAnalcolici" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addAnalcolici()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaAnalcolici" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateAnalcolici()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PIATTO APERITIVO -->
+
+<div class="container mt-5" id="table-container">
+  <p id="title">PIATTO APERITIVO</p>
+</div>
+
+<div id="table2">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let piattoApe of allPiattiApe">
+        <td colspan="2">
+          <p id="titolo">{{piattoApe.titolo}}</p>
+          <p id="descrizione">{{piattoApe.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{piattoApe.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaPiattoApe"
+            class="btn btn-primary" (click)="onEditPiattiApe(piattoApe)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deletePiattiApe(piattoApe)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiPiattoApe">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiPiattoApe" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addPiattiApe()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaPiattoApe" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updatePiattiApe()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>Gin
+</div>
+
+<!-- GIN -->
+
+<div class="container mt-5" id="table-container-gin">
+  <p id="title-gin">GIN</p>
+</div>
+
+<div id="table3">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let gin of allGin">
+        <td colspan="2">
+          <p id="titolo">{{gin.titolo}}</p>
+          <p id="descrizione">{{gin.descrizione}}</p>
+          <p id="descrizione2">{{gin.descrizione2}}</p>
+        </td>
+        <td id="prezzo">{{gin.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaGin"
+            class="btn btn-primary" (click)="onEditGin(gin)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteGin(gin)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiGin">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiGin" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione1</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+            <label>Descrizione2</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione2"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="addGin()">Aggiungi
+            elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaGin" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione1</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+            <label>Descrizione2</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione2"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="updateGin()">Modifica
+            elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARTA VINI -->
+
+<!-- <div class="container mt-3" id="table-container-vini">
+  <p id="title-menu">CARTA DEI VINI</p>
+</div> -->
+
+
+<!-- VINI BIANCHI -->
+
+<div class="container mt-5" id="table-container-vini2">
+  <p id="title">VINI BIANCHI</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <td colspan="2"></td>
+        <td id="titolo-colonna">Calice</td>
+        <td id="titolo-colonna">Bottiglia</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vinobianco of allViniBianchi">
+        <td colspan="2">
+          <p id="titolo-vino">{{vinobianco.titolo}}</p>
+          <p id="descrizione">{{vinobianco.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{vinobianco.prezzo}}€
+        </td>
+        <td id="prezzo">{{vinobianco.prezzo1}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaViniBianchi"
+            class="btn btn-primary" (click)="onEditViniBianchi(vinobianco)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteViniBianchi(vinobianco)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiViniBianchi">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiViniBianchi" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Calice</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Bottiglia</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo1"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addViniBianchi()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaViniBianchi" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Calice</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Bottiglia</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo1"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateViniBianchi()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VINI ROSSI -->
+
+<div class="container mt-5" id="table-container-vini2">
+  <p id="title">VINI ROSSI</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <td colspan="2"></td>
+        <td id="titolo-colonna">Calice</td>
+        <td id="titolo-colonna">Bottiglia</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vinorosso of allViniRossi">
+        <td colspan="2">
+          <p id="titolo-vino">{{vinorosso.titolo}}</p>
+          <p id="descrizione">{{vinorosso.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{vinorosso.prezzo}}€
+        </td>
+        <td id="prezzo">{{vinorosso.prezzo1}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaViniRossi"
+            class="btn btn-primary" (click)="onEditViniRossi(vinorosso)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteViniRossi(vinorosso)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiViniRossi">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiViniRossi" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Calice</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Bottiglia</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo1"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addViniRossi()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaViniRossi" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Calice</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Bottiglia</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo1"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateViniRossi()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ROSE -->
+
+<div class="container mt-5" id="table-container-vini2">
+  <p id="title">ROSE'</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <td colspan="2"></td>
+        <td id="titolo-colonna">Calice</td>
+        <td id="titolo-colonna">Bottiglia</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rose of allRose">
+        <td colspan="2">
+          <p id="titolo-vino">{{rose.titolo}}</p>
+          <p id="descrizione">{{rose.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{rose.prezzo}}€
+        </td>
+        <td id="prezzo">{{rose.prezzo1}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaRose"
+            class="btn btn-primary" (click)="onEditRose(rose)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteRose(rose)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiRose">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiRose" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Calice</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Bottiglia</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo1"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="addRose()">Aggiungi
+            elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaRose" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Calice</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+              <label>Prezzo Bottiglia</label>
+              <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo1"
+                class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateRose()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOLLICINE -->
+
+<div class="container mt-5" id="table-container-vini2">
+  <p id="title">BOLLICINE</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <td colspan="2"></td>
+        <td id="titolo-colonna">Calice</td>
+        <td id="titolo-colonna">Bottiglia</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bollicine of allBollicine">
+        <td colspan="2">
+          <p id="titolo-vino">{{bollicine.titolo}}</p>
+          <p id="descrizione">{{bollicine.descrizione}}</p>
+        </td>
+        <td id="prezzo">{{bollicine.prezzo}}€
+        </td>
+        <td id="prezzo">{{bollicine.prezzo1}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaBollicine"
+            class="btn btn-primary" (click)="onEditBollicine(bollicine)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteBollicine(bollicine)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiBollicine">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiBollicine" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Calice</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Bottiglia</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo1"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="addBollicine()">Aggiungi elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaBollicine" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Calice</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo Bottiglia</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo1"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateBollicine()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIQUORI -->
+
+<!-- <div class="container mt-3" id="table-container-liquori">
+  <p id="title-menu">LIQUORI</p>
+</div> -->
+
+<!-- GRAPPE -->
+
+<div class="container mt-5" id="table-container-liquori2">
+  <p id="title">GRAPPE</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let grappe of allGrappe">
+        <td colspan="2">
+          <p id="titolo">{{grappe.titolo}}</p>
+          <p id="descrizione">{{grappe.descrizione}}</p>
+          <p id="descrizione2">{{grappe.descrizione2}}</p>
+        </td>
+        <td id="prezzo">{{grappe.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaGrappe"
+            class="btn btn-primary" (click)="onEditGrappe(grappe)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteGrappe(grappe)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiGrappe">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiGrappe" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="addGrappe()">Aggiungi
+            elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaGrappe" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateGrappe()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHISKY -->
+
+<div class="container mt-5" id="table-container-liquori2">
+  <p id="title">WHISKY</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let whisky of allWhisky">
+        <td colspan="2">
+          <p id="titolo">{{whisky.titolo}}</p>
+          <p id="descrizione">{{whisky.descrizione}}</p>
+          <p id="descrizione2">{{whisky.descrizione2}}</p>
+        </td>
+        <td id="prezzo">{{whisky.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaWhisky"
+            class="btn btn-primary" (click)="onEditWhisky(whisky)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteWhisky(whisky)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiWhisky">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiWhisky" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="addWhisky()">Aggiungi
+            elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaWhisky" tabindex="-1" aria-labelledby="exampleModalLabel"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal"
+            (click)="updateWhisky()">Modifica elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RUM -->
+
+<div class="container mt-5" id="table-container-liquori2">
+  <p id="title">RUM</p>
+</div>
+
+<div id="table">
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngFor="let rum of allRum">
+        <td colspan="2">
+          <p id="titolo">{{rum.titolo}}</p>
+          <p id="descrizione">{{rum.descrizione}}</p>
+          <p id="descrizione2">{{rum.descrizione2}}</p>
+        </td>
+        <td id="prezzo">{{rum.prezzo}}€
+        </td>
+
+        <!-- bottone modifica -->
+        <td>
+          <button id="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#modalModificaRum"
+            class="btn btn-primary" (click)="onEditRum(rum)">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        </td>
+        <!-- bottone cancella -->
+        <td>
+          <button id="btn-delete" type="button" class="btn btn-danger" (click)="deleteRum(rum)"><i
+              class="fa-solid fa-trash"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- bottone aggiungi -->
+  <button id="btn-add" type="button" class="btn btn-dark mb-5" data-bs-toggle="modal"
+    data-bs-target="#modalAggiungiRum">Aggiungi elemento</button>
+</div>
+
+
+<!-- modale aggiungi -->
+<div class="modal fade" id="modalAggiungiRum" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="addRum()">Aggiungi
+            elemento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modale modifca -->
+<div class="modal fade" id="modalModificaRum" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+
+            <label>Titolo</label>
+            <input id="testo" type="text" placeholder="Inserisci il titolo" formControlName="titolo"
+              class="form-control mt-2 mb-3">
+
+            <label>Descrizione</label>
+            <input id="testo" type="text" placeholder="Inserisci la descrizione" formControlName="descrizione"
+              class="form-control mt-2 mb-3">
+
+            <label>Prezzo</label>
+            <input id="testo" type="text" placeholder="Inserisci il prezzo" formControlName="prezzo"
+              class="form-control mt-2 mb-3">
+
+          </div>
+          <button id="btn-add" type="submit" class="btn btn-dark" data-bs-dismiss="modal" (click)="updateRum()">Modifica
+            elemento</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

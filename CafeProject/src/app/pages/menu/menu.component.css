@@ -1,54 +1,171 @@
 
-#table-container{
+#title, #title-menu, #title-gin{
+    font-family: 'Nova Mono', monospace;
+}
+
+#table-container {
     margin: auto;
 }
 
-#table-container-vini.container{
-     margin-left: -12px;
+#table-container-vini.container {
+    margin-left: -12px;
 }
 
-#title{
- text-transform: uppercase;
+/* #title-image::after {
+    margin-top: 50px;
+    content: "";
+    background-image: url("../../../assets/immagini/sfondo_foglie2.1.jpg");
+    height: 500px;
+    background-size: cover;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+} */
+
+#table-container{
+    margin-top: 50px;
+    content: "";
+    background-image: url("../../../assets/immagini/sfondo_foglie2_trasp.png");
+    height: 500px;
+    background-size: cover;
+    opacity: 0.6;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px inset;
 }
 
-td{
+#table-container1{
+    margin-top: 50px;
+    content: "";
+    background-image: url("../../../assets/immagini/sfondo_foglie2.1.jpg");
+    height: 500px;
+    background-size: cover;
+    opacity: 0.6;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;}
+
+#table-container-gin{
+    content: "";
+    background-image: url("../../../assets/immagini/Ginepro-copia.png");
+    height: 650px;
+    background-size: cover;
+    opacity: 0.6;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px inset;
+}
+
+div#table-container-vini.container{
+    margin-left: 0px;
+    content: "";
+    background-image: url("../../../assets/immagini/vite3.png");
+    height: 500px;
+    background-size: cover;
+    opacity: 0.6;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+#table-container-vini2{
+    margin-left: 0px;
+    content: "";
+    background-image: url("../../../assets/immagini/vite4.png");
+    height: 500px;
+    background-size: cover;
+    opacity: 0.6;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+#table-container-liquori{
+    margin-left: 0px;
+    content: "";
+    background-image: url("../../../assets/immagini/liquori.png");
+    height: 500px;
+    background-size: cover;
+    opacity: 0.6;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+#table-container-liquori2{
+    margin-left: 0px;
+    content: "";
+    background-image: url("../../../assets/immagini/liquori2.png");
+    height: 500px;
+    background-size: cover;
+    opacity: 0.6;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+
+
+#title-menu, #title, #title-gin {
+    padding-top: 200px;
+    text-align: center;
+    font-size: 50px; 
+}
+
+#title-gin {
+    padding-top: 200px;
+}
+
+#table{
+    margin-top: -200px;
+
+}
+
+#table2{
+    margin-top: -130px;
+
+}
+
+#table3{
+    margin-top: -280px;
+
+}
+
+td {
     border: none;
 }
 
-#titolo{
+#titolo {
     font-weight: bold;
 }
 
-#titolo,#descrizione1, #descrizione, #prezzo, #descrizione2, #titolo-vino, #titolo-colonna{
+#titolo,
+#descrizione1,
+#descrizione,
+#prezzo,
+#descrizione2,
+#titolo-vino,
+#titolo-colonna {
     font-family: 'Nunito', sans-serif;
 }
 
-#descrizione1{
+#descrizione1 {
     font-size: 14px;
     margin-top: -15px;
     font-style: oblique;
 }
 
-#descrizione{
-    color:var(--grigio-descr);
+#descrizione {
+    color: var(--grigio-descr);
     font-size: 14px;
     margin-top: -15px;
 }
 
-#descrizione2{
-    color:var(--grigio-descr);
+#descrizione2 {
+    color: var(--grigio-descr);
     font-size: 14px;
     margin-top: 15px;
 }
 
-#titolo-vino{
+#titolo-vino {
     font-weight: bold;
 }
 
-#titolo-colonna{
+#titolo-colonna {
     font-weight: bold;
 }
 
-#prezzo, #titolo-colonna{
+#prezzo,
+#titolo-colonna {
     text-align: end;
 }

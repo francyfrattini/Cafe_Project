@@ -10,7 +10,9 @@ import { ContattiComponent } from './pages/contatti/contatti.component';
 import { NavbarComponent } from './sharepages/navbar/navbar.component';
 import { FooterComponent } from './sharepages/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AdminComponent } from './admin/admin.component';
+import { CommonModule, NgIf } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -20,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
         ContattiComponent,
         NavbarComponent,
         FooterComponent,
-        
+        AdminComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -29,6 +31,15 @@ import { HttpClientModule } from '@angular/common/http';
         AppRoutingModule,
         NgbModule,
         HttpClientModule,
+        CommonModule,
+        NgIf,
+        BrowserModule, 
+        AppRoutingModule,
+        NgbModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        FormsModule,
+        
     ]
 })
 export class AppModule { }
