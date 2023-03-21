@@ -22,7 +22,6 @@ a.navbar-brand{
 
 a.nav-link.active{
     color: rgba(255, 255, 255);
-    text-transform: uppercase;
 }
 
 a.nav-link.active:hover{
@@ -38,6 +37,5 @@ a.nav-link.active:hover{
 }
 
 #admin{
-    margin-top: 500px;
-    font-size: 8px;
+    margin-top: 20px;
 }

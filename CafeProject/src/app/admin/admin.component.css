@@ -49,3 +49,11 @@ td {
 #btn-add{
     margin-left: 10px;
 }
+
+#titolo-modale, #descrizion-modale, #prezzo-modale{
+    width: 280px;
+}
+
+#descrizione-modale{
+    height: 150px;
+}

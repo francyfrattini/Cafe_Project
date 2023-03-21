@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Proza+Libre&family=Tulpen+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Spectral:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
 *{
     padding: 0;
@@ -12,11 +13,12 @@
 
 body{
     height: 100vh;
-    background-color: var(--verde-body);;
+    background-color: var(--verde-body);
 }
 
 :root{
     --verde-nav: rgb(118, 152, 112);
+    --verde-navtrasp: rgba(118, 152, 112, 0.7);
     --verde-body: rgb(247, 255, 246);
     --grigio-descr:  rgb(105, 105, 105);
 }

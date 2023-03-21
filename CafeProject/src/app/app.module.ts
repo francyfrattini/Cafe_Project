@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -13,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { CommonModule, NgIf } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     declarations: [
@@ -23,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         NavbarComponent,
         FooterComponent,
         AdminComponent,
+        LoginComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -38,8 +39,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         NgbModule,
         ReactiveFormsModule,
         HttpClientModule,
-        FormsModule,
-        
+        FormsModule,    
+            
     ]
 })
 export class AppModule { }
