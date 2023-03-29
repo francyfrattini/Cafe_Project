@@ -5,6 +5,7 @@ Website per un bar composto da:
 - HOME
 - MENU
 - CONTATTI
+
 Il proprietario del ristorante avrà un profilo admin con la possibilità di aggiungere, eliminare e aggiornare le componenti del menù
 
 -------------------------------------------------------------------------------------------------------------------------------------
