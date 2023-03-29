@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   onLogin(){
 
-    if(this.loginObj.userName == 'mariluca900' && this.loginObj.password =='9002023') {
+    if(this.loginObj.userName == 'admin' && this.loginObj.password =='admin') {
       localStorage.setItem('role','admin');
       this.router.navigateByUrl('admin');
     } 

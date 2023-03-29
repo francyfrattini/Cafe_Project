@@ -1,7 +1,9 @@
 <!-- CAFFETTERIA -->
 
 <div class="container mt-3" id="table-container1">
-  <p id="title-menu">MENU</p>
+  <p id="title-novecento"><img src="../../../assets/immagini/900_black.png" alt="logo_novecento" height="50"></p>
+  <p id="title-menu-principale">Menù</p>
+  <p id="title-english">We also speak English</p>
 </div>
 
 <div class="container mt-5" id="table-container">
@@ -143,6 +145,12 @@
 
 <div id="table">
 
+  <div class="container mt-5" id="birre-collesi">
+    <p>Le <b> birre artigianali italiane di Collesi </b> trovano il loro microclima ideale in un piccolo borgo medievale, Apecchio,
+      al confine tra <b> Marche e Umbria.</b> Nascono qui tutte le eccellenze a marchio Collesi e da qui viaggiano in tutto il mondo
+      incontrando il gusto di un pubblico di estimatori internazionali e ottenendo prestigiosi premi.</p>  
+  </div>
+
   <table class="table mt-5">
     <tbody>
       <tr *ngFor="let birra of allBirre">
@@ -156,11 +164,12 @@
     </tbody>
   </table>
 
+  <div class="container mt-5" id="container-medaglie">
+    <img id="premi-birre-collesi" src="../../../assets/immagini/medaglie_birre.png" alt="premi-birre-collesi">
+  </div>
+
 </div>
 
-<p>Le birre artigianali italiane di Collesi trovano il loro microclima ideale in un piccolo borgo medievale, Apecchio,
-  al confine tra Marche e Umbria. Nascono qui tutte le eccellenze a marchio Collesi e da qui viaggiano in tutto il mondo
-  incontrando il gusto di un pubblico di estimatori internazionali e ottenendo prestigiosi premi.</p>
 
 <!-- BIRRE COLLESI-->
 
@@ -170,7 +179,7 @@
 
 <div id="table2">
 
-  <table class="table mt-5">
+  <table class="table">
     <tbody>
       <tr *ngFor="let birracollese of allBirreCollesi">
         <td colspan="2">
@@ -187,7 +196,7 @@
 
 <!-- APERITIVO -->
 
-<div class="container mt-3" id="table-container1">
+<div class="container mt-5" id="table-container1">
   <p id="title-menu">APERITIVO</p>
 </div>
 
@@ -199,7 +208,7 @@
 
 <div id="table2">
 
-  <table class="table mt-5">
+  <table class="table">
     <tbody>
       <tr *ngFor="let ape of allApe">
         <td colspan="2">
@@ -245,7 +254,7 @@
 
 <div id="table2">
 
-  <table class="table mt-5">
+  <table class="table">
     <tbody>
       <tr *ngFor="let signature of allSignature">
         <td colspan="2">
@@ -315,7 +324,7 @@
 
 <div id="table2">
 
-  <table class="table mt-5">
+  <table class="table">
     <tbody>
       <tr *ngFor="let piattoApe of allPiattiApe">
         <td colspan="2">
@@ -356,7 +365,7 @@
 
 <!-- CARTA VINI -->
 
-<div class="container mt-3" id="table-container-vini">
+<div class="container mt-5" id="table-container-vini">
   <p id="title-menu">CARTA DEI VINI</p>
 </div>
 
@@ -491,7 +500,7 @@
 
 <!-- LIQUORI -->
 
-<div class="container mt-3" id="table-container-liquori">
+<div class="container mt-5" id="table-container-liquori">
   <p id="title-menu">LIQUORI</p>
 </div>
 
