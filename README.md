@@ -1,22 +1,26 @@
 # Cafe_Project
 
-Progetto realizzato con il framework ```ANGULAR```. <br>
-Website per un bar composto da:
+Progetto con visualizzazione solo MOBILE realizzato con il framework ```ANGULAR```. <br>
+WebApp per un bar composto da:
 - HOME
 - MENU
 - CONTATTI
 
-Il proprietario del ristorante ha un profilo admin con la possibilità di aggiungere, eliminare e aggiornare le componenti del menù
+Il proprietario del ristorante ha un profilo admin con la possibilità di aggiungere, eliminare e aggiornare le componenti del menù.
+
+Link al sito reale: https://caffeboutiquenovecento.it/
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-Project created with the framework ```ANGULAR```. <br>
-Website for a cafe consisting of:
+Project with MOBILE display only created with the framework ```ANGULAR```. <br>
+WebApp for a cafe consisting of:
 - HOME
 - MENU
 - CONTACTS
 
-The restaurant owner has an admin profile with the ability to add, delete and update menu components
+The restaurant owner has an admin profile with the ability to add, delete and update menu components.
+
+Link to the website: https://caffeboutiquenovecento.it/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
