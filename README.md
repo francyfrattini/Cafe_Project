@@ -16,4 +16,4 @@ Website for a cafe consisting of:
 - MENU
 - CONTACTS
 
-The restaurant owner will has an admin profile with the ability to add, delete and update menu components
+The restaurant owner has an admin profile with the ability to add, delete and update menu components
