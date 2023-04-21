@@ -22,6 +22,8 @@ The restaurant owner has an admin profile with the ability to add, delete and up
 
 Link to the website: https://caffeboutiquenovecento.it/
 
+-------------------------------------------------------------------------------------------------------------------------------------
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
 ## Development server
